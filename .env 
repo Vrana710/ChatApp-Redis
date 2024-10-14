@@ -1,4 +1,0 @@
-# .env file
-PORT=3000
-REDIS_HOST=localhost
-REDIS_PORT=6379
