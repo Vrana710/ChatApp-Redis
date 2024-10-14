@@ -67,6 +67,16 @@ This application allows users to join chat rooms, exchange messages, and see onl
 - Messages will appear in the chat box with the sender's name.
 - You can open multiple browser tabs to simulate different users chatting.
 
+## Demo
+
+Watch the demo video of the ChatApp-Redis 
+
+https://github.com/user-attachments/assets/aac4b861-644f-4f0c-bc7c-dd201f1a174e
+
+Alternatively, you can view the video directly in the browser [here](https://github.com/user-attachments/assets/aac4b861-644f-4f0c-bc7c-dd201f1a174e).
+
+Note: If you are not able to see the video, you may need to download it to view it properly.
+
 ## Contributing
 
 Contributions are welcome! Please follow these steps to contribute:

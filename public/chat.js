@@ -14,7 +14,10 @@ const messageInput = document.getElementById('message-input');
 // Receive and display messages
 socket.on('receiveMessage', (data) => {
   const messageElement = document.createElement('p');
-  messageElement.textContent = `${data.user}: ${data.message}`; // Display the sender's name and message
+  // Create a Date object from the timestamp and format it
+  const options = { hour: 'numeric', minute: 'numeric', hour12: true }; // Options for AM/PM format
+  const time = new Date(data.timestamp).toLocaleTimeString(undefined, options); // Format the time
+  messageElement.textContent = `${data.user} [${time}]: ${data.message}`; // Display sender's name, time, and message
   chatBox.appendChild(messageElement);
   chatBox.scrollTop = chatBox.scrollHeight; // Scroll to the bottom when new messages arrive
 });
@@ -24,7 +27,8 @@ messageInput.addEventListener('keydown', (e) => {
   if (e.key === 'Enter' && messageInput.value.trim() !== '') {
     const message = {
       user: username, // Send the username with the message
-      message: messageInput.value.trim()
+      message: messageInput.value.trim(),
+      timestamp: Date.now() // Capture the current timestamp
     };
     socket.emit('sendMessage', message); // Emit the message to the server
     messageInput.value = ''; // Clear the input field
