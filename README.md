@@ -37,8 +37,8 @@ This application allows users to join chat rooms, exchange messages, and see onl
 
 1. **Clone the repository**:
    ```bash
-   git clone https://github.com/Vrana710/ChatAppRedis.git
-   cd ChatAppRedis
+   git clone https://github.com/Vrana710/ChatApp-Redis.git
+   cd ChatApp-Redis
    ```
 
 2. **Install dependencies**:
